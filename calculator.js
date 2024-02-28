@@ -1,3 +1,9 @@
+let firstNumber,secondNumber,operator;
+
+
+
+
+
 //Functions to perform the basic mathematical operations with two operands
 
 function add(a, b){
@@ -15,3 +21,4 @@ function multiply(a,b){
 function divide(a,b){
     return a/b;
 }
+
