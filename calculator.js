@@ -1,7 +1,14 @@
 let firstNumber,secondNumber,operator;
+let displayValue = '';
 
+//Sets up buttonPanel object
+const buttonPanel = document.querySelector('#buttonPanel');
 
+//Sets up listener function in the buttonPanel object
+buttonPanel.addEventListener('click',updateDisplayValue);
 
+//Sets up memoryPanel object for showing expression
+const memoryPanel = document.querySelector('.memoryPanel');
 
 
 //Functions to perform the basic mathematical operations with two operands
@@ -35,4 +42,12 @@ function operate(firstNumber,secondNumber,operator){
         case '/':
             return divide(firstNumber,secondNumber);  
     }
+}
+
+//Function to update display when user clicks a button
+
+function updateDisplayValue(e){
+    displayValue += e.target.id;
+    memoryPanel.innerText = displayValue;
+
 }
